@@ -1,0 +1,12 @@
+how to basic
+https://reffect.co.jp/react/next-auth
+// INFO: continue with reading above about token
+
+google auth scope for calender api v3
+https://developers.google.com/identity/protocols/oauth2/scopes#calendar
+
+v4 update
+https://next-auth.js.org/getting-started/client#usesession
+
+data, user inside of session after signin
+https://github.com/nextauthjs/next-auth/blob/8ff4b260143458c5d8a16b80b11d1b93baa0690f/types/index.d.ts#L437-L444

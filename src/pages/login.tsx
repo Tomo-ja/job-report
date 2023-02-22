@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { signIn, useSession } from 'next-auth/react';
 import { Button, Stack, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -10,10 +11,13 @@ const MainContainer = styled(Container)(({ theme }) => ({
 }));
 
 // TODO: need to make these state recoil atom
-const googleOk = true;
 const slackOk = false;
 
-function login() {
+function Login() {
+    const { data: session } = useSession();
+
+    console.log('session', session);
+
     return (
         <>
             <Head>
@@ -34,7 +38,9 @@ function login() {
                         variant="outlined"
                         size="large"
                         color="info"
-                        endIcon={googleOk ? <CheckCircleOutlineIcon /> : <CheckCircleIcon />}
+                        onClick={() => signIn()}
+                        disabled={session ? true : false}
+                        endIcon={session ? <CheckCircleIcon /> : <CheckCircleOutlineIcon />}
                     >
                         Google
                     </Button>
@@ -52,4 +58,4 @@ function login() {
     );
 }
 
-export default login;
+export default Login;
