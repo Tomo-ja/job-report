@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import { RecoilRoot } from 'recoil';
+import { SessionProvider } from 'next-auth/react';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -22,10 +23,12 @@ const MyApp: React.FunctionComponent<MyAppProps> = props => {
 
     return (
         <CacheProvider value={emotionCache}>
-            <CssBaseline />
-            <RecoilRoot>
-                <Component {...pageProps} />
-            </RecoilRoot>
+            <SessionProvider session={pageProps.session}>
+                <CssBaseline />
+                <RecoilRoot>
+                    <Component {...pageProps} />
+                </RecoilRoot>
+            </SessionProvider>
         </CacheProvider>
     );
 };
