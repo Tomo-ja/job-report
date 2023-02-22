@@ -1,0 +1,4 @@
+application automatically check ESLint before commit.
+
+this is how to set up ESLint, Prettier, Husky, and lint-stage
+https://dev.to/joshchu/how-to-setup-prettier-eslint-husky-and-lint-staged-with-a-nextjs-and-typescript-project-i7b

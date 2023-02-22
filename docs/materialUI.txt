@@ -1,0 +1,9 @@
+how to install MUI
+https://dev.to/hpouyanmehr/nextjs-mui-v5-typescript-tutorial-and-starter-3pab
+
+default theme of MUI
+https://mui.com/material-ui/customization/default-theme/
+
+
+how to use styled component within MUI
+https://dev.to/rasaf_ibrahim/styled-components-in-material-ui-mui-with-styled-utility-3l3j
